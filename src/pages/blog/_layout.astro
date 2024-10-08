@@ -1,9 +1,35 @@
 ---
-const {title, date} = Astro.props.frontmatter;
-const niceDate = new Date(date).toLocaleString();
+import Lay from "../../layouts/Layout.astro";
+const { title, date, timeless } = Astro.props.frontmatter;
+const _date = new Date(date);
+const niceDate = `${_date.getFullYear()}-${_date.getMonth() + 1}-${_date.getDate()}`;
+const isOld = _date.getFullYear() < 2022;
 ---
 
-<h1>{title}</h1>
-{date}
+<Lay title={title}>
+    <h1>{title}</h1>
+    {niceDate}
+    {
+        (isOld && !timeless) && (
+            <aside class="old-warning">⌛️ 
+                Note: this content is old! I'm keeping old blog posts online &ndash; old content can be very good &ndash; but
+                please verify technical info using up-do-date sources.
+            </aside>
+        )
+    }
+    <slot />
+    <hr>
+    <footer>
+        <a href="/blog">&laquo; Back to blog listing</a>
+        <h2>Feedback, comments, etc.:</h2>
+        <a href="https://x.com/jsonsackey">Twitter X</a>
+    </footer>
+</Lay>
 
-<slot/>
+<style>
+    .old-warning {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 2px dashed grey;
+    }
+</style>

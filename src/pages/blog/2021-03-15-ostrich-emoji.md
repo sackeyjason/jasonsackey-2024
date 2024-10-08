@@ -8,6 +8,7 @@ tags:
   - "symbols"
   - "xhome"
 layout: "./_layout.astro"
+timeless: true
 ---
 
 Many folks want one.
