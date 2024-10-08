@@ -1,0 +1,9 @@
+---
+const {title, date} = Astro.props.frontmatter;
+const niceDate = new Date(date).toLocaleString();
+---
+
+<h1>{title}</h1>
+{date}
+
+<slot/>

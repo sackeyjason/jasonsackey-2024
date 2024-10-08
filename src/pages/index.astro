@@ -1,0 +1,70 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Jason Sackey</title>
+	</head>
+	<body>
+		<img src="/images/projection.jpg" alt="Jason's face" width="256" height="256" class="selfie">
+		<h1>Jason Sackey</h1>
+		<div class="container">
+			<p>London-based software developer. Web, games, cutting-edge of tech, the history of computing, science fiction, VR. Solving problems with simple design and clean code.</p>
+			<ul>
+			<li><a href="/blog">Writing on my blog</a></li>
+			<li><a href="https://x.com/jsonsackey">Posts on X</a></li>
+			<li>Game prototypes
+				<ul class="games">
+					<li>
+					<a href="https://sackeyjason.github.io/orbital/"><img src="/images/orbital.png" alt="tetrominoes curved around an arc"> Orbital (WIP)</a>
+					<p>Build a lovely space habitat in this tetromino-based action-puzzle game.
+					</li>
+					<li><a href="https://github.com/sackeyjason/bankoso/"><img src="/images/bankoso.png" alt="4 screenshots"> Bankoso</a>
+					<p>Sokoban-like puzzle game. Push blocks around. Unlike in the original, here you can shove multiple blocks simultaneously.
+					</li>
+				</ul>
+			</li>
+			<li><a href="LinkedIn">LinkedIn profile</a>
+			</li>
+			</ul>
+		</div>
+	</body>
+</html>
+
+<style>
+body{
+	margin: 0;
+}
+.selfie {
+	margin-bottom: -64px;
+}
+h1 {
+	color: white;
+}
+
+.container {
+	max-width: 600px;
+	padding: 0 1rem;
+}
+.games {
+	margin: 0;
+	padding: 0 0 0 0.5rem;
+	display: grid;
+	gap: 1rem;
+}
+.games li {
+	overflow: hidden;
+	padding: 1rem;
+	border: 1px solid;
+	max-width: 400px;
+}
+.games img {
+	float: left;
+	width: 128px;
+	margin: 0 .5rem .5rem 0;
+}
+</style>

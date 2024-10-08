@@ -1,0 +1,25 @@
+---
+const allPosts = await Astro.glob("./*.md");
+allPosts.reverse();
+---
+
+<h1>Blog</h1>
+
+<ul>
+    {
+        allPosts.map((post) => (
+            <li>
+                <a href={post.url}>{post.frontmatter.title} - 
+    {post.frontmatter.date}</a>
+            </li>
+        ))
+    }
+</ul>
+
+<style>
+    ul {
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+    }
+</style>
