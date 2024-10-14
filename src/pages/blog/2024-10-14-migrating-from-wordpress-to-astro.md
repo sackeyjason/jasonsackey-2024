@@ -1,6 +1,6 @@
 ---
-title: Migrating this site from WordPress to Astro
-date: '2024-10-08'
+title: 'Escape from WordPress: Migrating this site to Astro'
+date: '2024-10-14'
 layout: "./_layout.astro"
 ---
 
