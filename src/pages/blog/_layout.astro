@@ -10,17 +10,20 @@ const isOld = _date.getFullYear() < 2022;
 
 <Lay title={title}>
     <h1>{title}</h1>
-    {niceDate}
+    <div class="date">
+        {niceDate}
+    </div>
     {
-        (isOld && !timeless) && (
-            <aside class="old-warning">⌛️ 
-                Note: this content is old! I'm keeping old blog posts online &ndash; old content can be very good &ndash; but
-                please verify technical info using up-do-date sources.
+        isOld && !timeless && (
+            <aside class="old-warning">
+                ⌛️ Note: this content is old! I'm keeping old blog posts online
+                &ndash; old content can be very good &ndash; but please verify
+                technical info using up-do-date sources.
             </aside>
         )
     }
     <slot />
-    <hr>
+    <hr />
     <footer>
         <a href="/blog">&laquo; Back to blog listing</a>
         <div class="socials">
@@ -34,6 +37,12 @@ const isOld = _date.getFullYear() < 2022;
         margin: 1rem 0;
         padding: 1rem;
         border: 2px dashed grey;
+    }
+    h1 {
+        margin: 0 0 .5rem;
+    }
+    .date {
+        font-weight: bold;
     }
     footer {
         padding: 1rem 0;
