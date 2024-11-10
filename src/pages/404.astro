@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404: Page not found">
+    <div class="content">
+        <div class="a">
+            <h1>404</h1>
+            <p>Page not found</p>
+            <a href="/">« Home</a>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    * {
+        margin: 0;
+    }
+    .content {
+        height: calc(100vh - 64px);
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        line-height: 1;
+    }
+
+    .a {
+        display: grid;
+        gap: .5rem;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+</style>

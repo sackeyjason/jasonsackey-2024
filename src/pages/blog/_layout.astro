@@ -1,5 +1,7 @@
 ---
 import Lay from "../../layouts/Layout.astro";
+import Socials from "../../components/Socials.astro";
+
 const { title, date, timeless } = Astro.props.frontmatter;
 const _date = new Date(date);
 const niceDate = `${_date.getFullYear()}-${_date.getMonth() + 1}-${_date.getDate()}`;
@@ -21,8 +23,9 @@ const isOld = _date.getFullYear() < 2022;
     <hr>
     <footer>
         <a href="/blog">&laquo; Back to blog listing</a>
-        <h2>Feedback, comments, etc.:</h2>
-        <a href="https://x.com/jsonsackey">Twitter X</a>
+        <div class="socials">
+            <Socials />
+        </div>
     </footer>
 </Lay>
 
@@ -31,5 +34,11 @@ const isOld = _date.getFullYear() < 2022;
         margin: 1rem 0;
         padding: 1rem;
         border: 2px dashed grey;
+    }
+    footer {
+        padding: 1rem 0;
+    }
+    .socials {
+        margin: 1rem 0;
     }
 </style>
