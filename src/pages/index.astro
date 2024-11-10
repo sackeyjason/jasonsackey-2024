@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Site.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <Layout title="Jason Sackey">
@@ -18,51 +19,57 @@ import Layout from "../layouts/Site.astro";
 				tech, the history of computing, science fiction ▿ solving
 				problems with simple design and clean code
 			</p>
+			<div class="socials-wrapper">
+				<div class="">
+					<Socials />
+				</div>
+			</div>
 		</div>
 	</header>
+	
 
 	<div class="container">
-		<ul>
+		<h2>Blog</h2>
+		<p><a href="/blog">Writing about tech</a></p>
+		<p>
+			<b>Latest:</b>
+			<a href="/blog/2024-10-14-migrating-from-wordpress-to-astro"
+				>Migrating this site from WordPress to Astro</a
+			>
+		</p>
+
+		<h2>Game prototypes</h2>
+
+		<ul class="games">
 			<li>
-				<a href="/blog">Writing on my blog</a>
-				<div>
-					<b>Latest:</b>
-					<a href="/blog/2024-10-14-migrating-from-wordpress-to-astro"
-						>Migrating this site from WordPress to Astro</a
+				<h3>
+					<a href="https://sackeyjason.github.io/orbital/"
+						><img
+							src="/images/orbital.png"
+							alt="tetrominoes curved around an arc"
+						/> Orbital (WIP)</a
 					>
-				</div>
-			</li>
-			<li><a href="https://x.com/jsonsackey">Posts on X</a></li>
-			<li>
-				Game prototypes
-				<ul class="games">
-					<li>
-						<a href="https://sackeyjason.github.io/orbital/"
+				</h3>
+
+				<p>
+					Build a lovely space habitat in this tetromino-based
+					action-puzzle game.
+				</p>
+				<li>
+					<h3>
+						<a href="https://github.com/sackeyjason/bankoso/"
 							><img
-								src="/images/orbital.png"
-								alt="tetrominoes curved around an arc"
-							/> Orbital (WIP)</a
-						>
-						<p>
-							Build a lovely space habitat in this tetromino-based
-							action-puzzle game.
-						</p>
-						<li>
-							<a href="https://github.com/sackeyjason/bankoso/"
-								><img
-									src="/images/bankoso.png"
-									alt="4 screenshots"
-								/> Bankoso</a
-							>
-							<p>
-								Sokoban-like puzzle game. Push blocks around.
-								Unlike in the original, here you can shove
-								multiple blocks simultaneously.
-							</p>
-						</li>
-					</li>
-					<li><a href="LinkedIn">LinkedIn profile</a></li>
-				</ul>
+								src="/images/bankoso.png"
+								alt="4 screenshots"
+							/> Bankoso</a>
+					</h3>
+
+					<p>
+						Sokoban-like puzzle game. Push blocks around. Unlike in
+						the original, here you can shove multiple blocks
+						simultaneously.
+					</p>
+				</li>
 			</li>
 		</ul>
 
@@ -72,6 +79,7 @@ import Layout from "../layouts/Site.astro";
 			}
 			header {
 				display: flex;
+				box-shadow: 0 0 8px 8px rgba(255, 0, 255, 0.236);
 			}
 			.selfie {
 				aspect-ratio: 1;
@@ -87,6 +95,13 @@ import Layout from "../layouts/Site.astro";
 			}
 			.header-body > * {
 				margin: 0;
+			}
+			.socials-wrapper {
+				align-self: flex-start;
+				border: 1px solid hotpink;
+				border-left: none;
+				border-right: none;
+				padding: 1rem 0;
 			}
 
 			.container {

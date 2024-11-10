@@ -35,7 +35,7 @@ Details for getting here are beyond the scope of this post, but here are some he
 
 So we've got two servers, nginx and Urbit, running. We can see our urbit's web interface by going to `http://$ourdomain.net:8080`. We can get to the page of interest by appending `/pagename` or `/page/path` to that url.
 
-E.g. [operatingspace.net:8080/chat/](http://operatingspace.net:8080/chat/)
+E.g. [example.net:8080/chat/](http://example.net:8080/chat/)
 
 Goal: get rid of the ':8080' there, and use 'chat' as a subdomain instead of a path.
 
