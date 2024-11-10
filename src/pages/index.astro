@@ -14,9 +14,9 @@ import Layout from "../layouts/Site.astro";
 		<div class="header-body">
 			<h1>Jason Sackey</h1>
 			<p>
-				London-based software developer. Web, games, cutting-edge of
-				tech, the history of computing, science fiction, VR. Solving
-				problems with simple design and clean code.
+				London-based software developer ▿ web, games, cutting-edge of
+				tech, the history of computing, science fiction ▿ solving
+				problems with simple design and clean code
 			</p>
 		</div>
 	</header>
@@ -28,7 +28,8 @@ import Layout from "../layouts/Site.astro";
 				<div>
 					<b>Latest:</b>
 					<a href="/blog/2024-10-14-migrating-from-wordpress-to-astro"
-						>Migrating this site from WordPress to Astro</a>
+						>Migrating this site from WordPress to Astro</a
+					>
 				</div>
 			</li>
 			<li><a href="https://x.com/jsonsackey">Posts on X</a></li>
@@ -79,6 +80,13 @@ import Layout from "../layouts/Site.astro";
 			}
 			.header-body {
 				margin: 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				justify-content: center;
+			}
+			.header-body > * {
+				margin: 0;
 			}
 
 			.container {
