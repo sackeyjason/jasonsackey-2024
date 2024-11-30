@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Site.astro";
 import Socials from "../components/Socials.astro";
+import LatestPosts from "../components/LatestPosts.astro";
 ---
 
 <Layout title="Jason Sackey">
@@ -31,12 +32,7 @@ import Socials from "../components/Socials.astro";
 	<div class="container">
 		<h2>Blog</h2>
 		<p><a href="/blog">Writing about tech</a></p>
-		<p>
-			<b>Latest:</b>
-			<a href="/blog/2024-10-14-migrating-from-wordpress-to-astro"
-				>Migrating this site from WordPress to Astro</a
-			>
-		</p>
+		<LatestPosts />
 
 		<h2>Game prototypes</h2>
 
