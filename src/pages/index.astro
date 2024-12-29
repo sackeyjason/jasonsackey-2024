@@ -100,7 +100,7 @@ import LatestPosts from "../components/LatestPosts.astro";
 			}
 			.socials-wrapper {
 				align-self: flex-start;
-				border: 1px solid hotpink;
+				border: 1px solid var(--color-primary);
 				border-left: none;
 				border-right: none;
 				padding: 1rem 0;
@@ -129,10 +129,16 @@ import LatestPosts from "../components/LatestPosts.astro";
 				width: 128px;
 				margin: 0 0.5rem 0.5rem 0;
 			}
+			.games li > :first-child {
+				margin-top: 0;
+			}
+			.games li > :last-child {
+				margin-bottom: 0;
+			}
 			footer {
 				padding: 4rem 0;
 				text-align: center;
-				color: coral;
+				color: var(--color-secondary);
 			}
 		</style>
 	</div></Layout

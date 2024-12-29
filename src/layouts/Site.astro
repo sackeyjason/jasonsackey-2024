@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="light-theme">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -25,8 +25,24 @@ const { title } = Astro.props;
 		:root {
 			font-family: system-ui, sans-serif;
 			overflow-y: scroll;
-			background: black;
-			color: white;
+			--color-bg: black;
+			--color-text: white;
+			--color-primary: hotpink;
+			--color-secondary: gold;
+			background: var(--color-bg);
+			color: var(--color-text);
+		}
+		.dark-theme {
+			--color-bg: black;
+			--color-text: white;
+			--color-primary: hotpink;
+			--color-secondary: gold;
+		}
+		.light-theme {
+			--color-bg: white;
+			--color-text: #444;
+			--color-primary: blue;
+			--color-secondary: tomato;
 		}
 		body {
 			margin: 0;
@@ -38,12 +54,11 @@ const { title } = Astro.props;
 			height: auto;
 		}
 		a {
-			color: hotpink;
+			color: var(--color-primary);
 		}
 		a:focus,
 		a:hover {
-			color: gold;
+			color: var(--color-secondary);
 		}
-
 	</style>
 </html>
