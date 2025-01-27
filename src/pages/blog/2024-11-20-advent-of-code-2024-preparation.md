@@ -41,3 +41,22 @@ I'm just using plain good old JS.
 I've prepared a function to load text files into memory. I'll add other util functions as I go along.
 
 More AoC updates to come.
+
+## Update:
+
+I did the first few days. Then took a break.
+
+Here are my results:
+
+```
+      --------Part 1--------   --------Part 2--------
+Day       Time   Rank  Score       Time   Rank  Score
+  6       >24h  71360      0       >24h  65456      0
+  5   19:27:40  68231      0   19:29:04  58251      0
+  4   09:19:02  47336      0   09:56:23  42274      0
+  3   03:39:24  34809      0   03:49:20  27518      0
+  2   03:37:35  31789      0   15:15:44  68253      0
+  1   05:07:52  28489      0   05:22:38  27277      0
+```
+
+A strong start. Then it got a bit tiresome. I plan to give it another go next year.
