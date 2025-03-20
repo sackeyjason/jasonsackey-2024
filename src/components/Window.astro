@@ -1,0 +1,30 @@
+---
+const { title } = Astro.props;
+---
+
+<article class="root">
+    <header class="title">{title}</header>
+    <div class="body">
+        <slot></slot>
+    </div>
+</article>
+
+<style>
+    .root {
+        background-color: color-mix(in hsl, var(--color-primary), transparent 90%);
+        border: 1px solid;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    .title {
+        padding: .5rem .75rem;
+        background-color: color-mix(in hsl, var(--color-primary), transparent 70%);
+        font-size: 14px;
+        font-family: monospace;
+        letter-spacing: 0.2rem;
+        border-bottom: 1px solid;
+    }
+    .body {
+        padding: 0.5rem 0.75rem;
+    }
+</style>

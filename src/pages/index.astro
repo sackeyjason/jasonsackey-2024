@@ -2,6 +2,7 @@
 import Layout from "../layouts/Site.astro";
 import Socials from "../components/Socials.astro";
 import LatestPosts from "../components/LatestPosts.astro";
+import Window from "../components/Window.astro";
 ---
 
 <Layout title="Jason Sackey">
@@ -30,10 +31,12 @@ import LatestPosts from "../components/LatestPosts.astro";
 	
 
 	<div class="container">
-		<h2>Blog</h2>
-		<p><a href="/blog">Writing about tech</a></p>
-		<LatestPosts />
-
+		<Window title="writing">
+			<h2>Blog</h2>
+			<p><a href="/blog">Writing about tech</a></p>
+			<LatestPosts />
+		</Window>
+		
 		<h2>Game prototypes</h2>
 
 		<ul class="games">
