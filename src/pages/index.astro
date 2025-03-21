@@ -7,18 +7,20 @@ import Window from "../components/Window.astro";
 
 <Layout title="Jason Sackey">
 	<header>
-		<img
-			src="/images/projection.jpg"
-			alt="Jason's face"
-			width="256"
-			height="256"
-			class="selfie"
-		/>
+		<div class="selfie-wrapper">
+			<img
+				src="/images/projection.jpg"
+				alt="Jason's face"
+				width="256"
+				height="256"
+				class="selfie"
+			/>
+		</div>
 		<div class="header-body">
 			<h1>Jason Sackey</h1>
 			<p>
-				London-based software developer ▿ web, games, cutting-edge of
-				tech, the history of computing, science fiction ▿ solving
+				London-based software developer · web, games, cutting-edge of
+				tech, the history of computing, science fiction · solving
 				problems with simple design and clean code
 			</p>
 			<div class="socials-wrapper">
@@ -28,15 +30,13 @@ import Window from "../components/Window.astro";
 			</div>
 		</div>
 	</header>
-	
 
 	<div class="container">
 		<Window title="writing">
-			<h2>Blog</h2>
-			<p><a href="/blog">Writing about tech</a></p>
 			<LatestPosts />
+			<p><a href="/blog">Full blog listing</a></p>
 		</Window>
-		
+
 		<h2>Game prototypes</h2>
 
 		<ul class="games">
@@ -60,7 +60,8 @@ import Window from "../components/Window.astro";
 							><img
 								src="/images/bankoso.png"
 								alt="4 screenshots"
-							/> Bankoso</a>
+							/> Bankoso</a
+						>
 					</h3>
 
 					<p>
@@ -72,13 +73,54 @@ import Window from "../components/Window.astro";
 			</li>
 		</ul>
 
-		<h2>Climbing</h2>
-		<p>I use Instagram for my <a href="https://www.instagram.com/jsonsackey/">bouldering videos.</a></p>
+		<Window title="(dis/)embodiment">
+			<blockquote class="panel">
+				<details>
+					<summary>
+						“They say we’re just heads,” Newkirk said chattily.
+					</summary>
+					<div class="details-content">
+						<p>
+							“They couldn’t be more wrong! Anyone can keep a head
+							alive, but without the hormonal environment of the
+							rest of the body, you don’t get anything remotely
+							resembling the rich texture of human consciousness.
+							We’re creatures of chemistry, not wiring. That’s why
+							we keep as much as possible, while throwing out
+							everything we don’t need. I still have glands, you
+							know. Glands make all the difference. Glands maketh
+							the man.”
+						</p>
+						<cite
+							><a
+								href="https://approachingpavonis.blogspot.com/2021/11/eversion-progress.html"
+								>Aurora Rising (formerly The Prefect) by
+								Alastair Reynolds</a
+							></cite
+						>
+					</div>
+				</details>
+			</blockquote>
+			<div>
+				<h2>Climbing</h2>
+				<p>
+					I use Instagram for my <a
+						href="https://www.instagram.com/jsonsackey/"
+						>bouldering videos.</a
+					>
+				</p>
 
-		<p><a href="/feedback">Feedback</a></p>
-		<footer>
-			▿
-		</footer>
+				<p>
+					”I quite like having a body, being able to walk around and
+					breathe.”
+				</p>
+			</div>
+		</Window>
+
+		<div class="panel" style="display: inline-block; padding: 0.5rem">
+			<a href="https://www.admonymous.co/jasonsackey">Feedback</a>
+		</div>
+		<footer>⊙</footer>
 
 		<style>
 			body {
@@ -87,10 +129,27 @@ import Window from "../components/Window.astro";
 			header {
 				display: flex;
 			}
-			.selfie {
+			.selfie-wrapper {
 				aspect-ratio: 1;
 				align-self: flex-start;
+				width: 256px;
+				height: 256px;
 				max-width: 30%;
+				position: relative;
+			}
+			.selfie {
+				filter: brightness(1.4);
+			}
+			.selfie-wrapper:after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				background: var(--color-primary);
+				mix-blend-mode: color;
 			}
 			.header-body {
 				margin: 1rem;
@@ -101,6 +160,9 @@ import Window from "../components/Window.astro";
 			}
 			.header-body > * {
 				margin: 0;
+			}
+			h1 {
+				text-shadow: 4px 4px 0 color-mix(in hsl, var(--color-primary), transparent 70%);
 			}
 			.socials-wrapper {
 				align-self: flex-start;
@@ -114,6 +176,18 @@ import Window from "../components/Window.astro";
 				margin: 0;
 				padding: 0 1rem;
 				max-width: 740px;
+			}
+			.panel {
+				margin: 0.5rem 0;
+				border: 1px dashed var(--color-primary);
+			}
+			.panel summary {
+				padding: 0.5rem;
+				border-bottom: 1px dashed
+					color-mix(in hsl, var(--color-primary), transparent 50%);
+			}
+			.panel .details-content {
+				padding: 0.5rem;
 			}
 			.games {
 				margin: 1rem 0;
@@ -145,5 +219,5 @@ import Window from "../components/Window.astro";
 				color: var(--color-secondary);
 			}
 		</style>
-	</div></Layout
->
+	</div>
+</Layout>
