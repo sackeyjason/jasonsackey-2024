@@ -6,32 +6,33 @@ import Window from "../components/Window.astro";
 ---
 
 <Layout title="Jason Sackey">
-	<header>
-		<div class="selfie-wrapper">
-			<img
-				src="/images/projection.jpg"
-				alt="Jason's face"
-				width="256"
-				height="256"
-				class="selfie"
-			/>
-		</div>
-		<div class="header-body">
-			<h1>Jason Sackey</h1>
-			<p>
-				London-based software developer · web, games, cutting-edge of
-				tech, the history of computing, science fiction · solving
-				problems with simple design and clean code
-			</p>
-			<div class="socials-wrapper">
-				<div class="">
-					<Socials />
-				</div>
-			</div>
-		</div>
-	</header>
-
 	<div class="container">
+		<div class="about-container">
+			<Window title="👨‍💻 about">
+				<h1>Jason Sackey</h1>
+				<p>
+					London-based software developer · web, games, cutting-edge of
+					tech, the history of computing, science fiction · solving
+					problems with simple design and clean code
+				</p>
+				<div class="socials-wrapper">
+					<div class="">
+						<Socials />
+					</div>
+				</div>
+			</Window>
+			</div>
+		<Window title="📷 selfie">
+			<div class="selfie-wrapper">
+				<img
+					src="/images/projection.jpg"
+					alt="Jason's face"
+					width="256"
+					height="256"
+					class="selfie"
+				/>
+			</div>
+		</Window>
 		<Window title="📝 writing">
 			<LatestPosts />
 			<p><a href="/blog">Full blog listing</a></p>
@@ -118,7 +119,6 @@ import Window from "../components/Window.astro";
 			</div>
 		</Window>
 	</div>
-	<footer>⊙</footer>
 </Layout>
 
 <style>
@@ -130,11 +130,10 @@ import Window from "../components/Window.astro";
 	}
 	.selfie-wrapper {
 		aspect-ratio: 1;
-		align-self: flex-start;
 		width: 256px;
 		height: 256px;
-		max-width: 30%;
 		position: relative;
+		margin: -0.5rem -0.75rem;
 	}
 	.selfie {
 		filter: brightness(1.4);
@@ -150,15 +149,8 @@ import Window from "../components/Window.astro";
 		background: var(--color-primary);
 		mix-blend-mode: color;
 	}
-	.header-body {
-		margin: 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		justify-content: center;
-	}
-	.header-body > * {
-		margin: 0;
+	.about-container {
+		max-width: 600px;
 	}
 	h1 {
 		text-shadow: 4px 4px 0
@@ -174,7 +166,7 @@ import Window from "../components/Window.astro";
 
 	.container {
 		margin: 0;
-		padding: 0 1rem;
+		padding: 1rem;
 		max-width: 100%;
 		display: flex;
 		gap: 1rem;
