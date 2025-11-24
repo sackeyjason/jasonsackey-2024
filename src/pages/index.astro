@@ -33,10 +33,10 @@ import Window from "../components/Window.astro";
 				/>
 			</div>
 		</Window>
-		<Window title="📝 writing">
+		<!-- <Window title="📝 writing">
 			<LatestPosts />
 			<p><a href="/blog">Full blog listing</a></p>
-		</Window>
+		</Window> -->
 
 		<Window title="👾 games">
 			<h2>Game prototypes</h2>
@@ -149,8 +149,10 @@ import Window from "../components/Window.astro";
 		background: var(--color-primary);
 		mix-blend-mode: color;
 	}
-	.about-container {
-		max-width: 600px;
+	@media screen and (min-width: 800px) {
+		.about-container {
+			max-width: calc(100vw - calc(3rem + 280px))
+		}
 	}
 	h1 {
 		text-shadow: 4px 4px 0
