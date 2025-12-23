@@ -16,7 +16,7 @@ const postList = allPosts
     {
         postList.map((post) => (
             <li>
-                <a href={post.url}>{post.title}</a>
+                <a href={post.url}>{post.date} {post.title}</a>
             </li>
         ))
     }

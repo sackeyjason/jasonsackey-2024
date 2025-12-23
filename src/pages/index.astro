@@ -7,8 +7,8 @@ import Window from "../components/Window.astro";
 
 <Layout title="Jason Sackey">
 	<div class="container">
-		<div class="about-container">
-			<Window title="👨‍💻 about">
+		<Window title="👨‍💻 about">
+			<div class="text-container">
 				<h1>Jason Sackey</h1>
 				<p>
 					London-based software developer · web, games, cutting-edge of
@@ -20,8 +20,8 @@ import Window from "../components/Window.astro";
 						<Socials />
 					</div>
 				</div>
-			</Window>
 			</div>
+		</Window>
 		<Window title="📷 selfie">
 			<div class="selfie-wrapper">
 				<img
@@ -34,8 +34,9 @@ import Window from "../components/Window.astro";
 			</div>
 		</Window>
 		<Window title="📝 writing">
+			<p>Blogging, notes, ideas</p>
 			<LatestPosts />
-			<p><a href="/blog">Full blog listing</a></p>
+			<p><a href="/blog">All posts</a></p>
 		</Window>
 
 		<Window title="👾 games">
@@ -74,48 +75,50 @@ import Window from "../components/Window.astro";
 				</li>
 			</ul>
 		</Window>
-		<Window title="🏃‍♂️ (dis/)embodiment">
-			<blockquote class="panel">
-				<details>
-					<summary>
-						“They say we’re just heads,” Newkirk said chattily.
-					</summary>
-					<div class="details-content">
-						<p>
-							“They couldn’t be more wrong! Anyone can keep a head
-							alive, but without the hormonal environment of the
-							rest of the body, you don’t get anything remotely
-							resembling the rich texture of human consciousness.
-							We’re creatures of chemistry, not wiring. That’s why
-							we keep as much as possible, while throwing out
-							everything we don’t need. I still have glands, you
-							know. Glands make all the difference. Glands maketh
-							the man.”
-						</p>
-						<cite
-							><a
-								href="https://approachingpavonis.blogspot.com/2017/07/elysium-fire-and-new-title-for-prefect.html"
-								>Aurora Rising (formerly The Prefect) by
-								Alastair Reynolds</a
-							></cite
+		<Window title="🏃‍♂️ embodiment">
+			<div class="text-container">
+				<blockquote class="panel">
+					<details>
+						<summary>
+							“They say we’re just heads,” Newkirk said chattily.
+						</summary>
+						<div class="details-content">
+							<p>
+								“They couldn’t be more wrong! Anyone can keep a head
+								alive, but without the hormonal environment of the
+								rest of the body, you don’t get anything remotely
+								resembling the rich texture of human consciousness.
+								We’re creatures of chemistry, not wiring. That’s why
+								we keep as much as possible, while throwing out
+								everything we don’t need. I still have glands, you
+								know. Glands make all the difference. Glands maketh
+								the man.”
+							</p>
+							<cite
+								><a
+									href="https://approachingpavonis.blogspot.com/2017/07/elysium-fire-and-new-title-for-prefect.html"
+									>Aurora Rising (formerly The Prefect) by
+									Alastair Reynolds</a
+								></cite
+							>
+						</div>
+					</details>
+				</blockquote>
+				<div>
+					<p>
+						I use Instagram for my <a
+							href="https://www.instagram.com/jsonsackey/"
+							>bouldering videos</a
+						> and also like to 🕺 dance and 🤼 wrestle.
+					</p>
+	
+					<center>
+						<small>
+							”I quite like having a body, being able to walk around
+							and breathe.”</small
 						>
-					</div>
-				</details>
-			</blockquote>
-			<div>
-				<p>
-					I use Instagram for my <a
-						href="https://www.instagram.com/jsonsackey/"
-						>bouldering videos</a
-					> and also like to 🕺 dance and 🤼 wrestle.
-				</p>
-
-				<center>
-					<small>
-						”I quite like having a body, being able to walk around
-						and breathe.”</small
-					>
-				</center>
+					</center>
+				</div>
 			</div>
 		</Window>
 	</div>
@@ -150,8 +153,8 @@ import Window from "../components/Window.astro";
 		mix-blend-mode: color;
 	}
 	@media screen and (min-width: 800px) {
-		.about-container {
-			max-width: calc(100vw - calc(3rem + 280px))
+		.text-container {
+			max-width: 600px;
 		}
 	}
 	h1 {
